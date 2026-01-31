@@ -343,51 +343,52 @@ main{padding-top:82px;}
 }
 /* ===== Mobile: brand left, categories right (vertical + scroll), no overlay ===== */
 /* ===== MOBILE FIX: vertical tabs with own scroll + no huge header ===== */
+/* ===== MOBILE CLEAN FIX: vertical tabs but NO overlay and NO narrow cards ===== */
 @media (max-width: 700px){
 
-  /* шапка остаётся компактной */
+  /* вернуть нормальную ширину контента */
+  main{ padding-right: 0 !important; }
+
+  /* шапка компактная */
   .topbar{
-    height: 72px;
-    align-items: center;
+    height: 72px !important;
+    align-items: center !important;
   }
 
-  /* бренд не прыгает и не переносится */
+  /* бренд как раньше */
   .brand{
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    max-width: 55vw;
+    max-width: 60vw !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
   }
 
-  /* кнопки уводим в фиксированную вертикальную колонку справа */
+  /* tabs НЕ fixed — чтобы не перекрывали */
   .tabs{
-    position: fixed;
-    top: 10px;
-    right: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 10px;
+    position: absolute !important;
+    top: 10px !important;
+    right: 10px !important;
 
-    max-height: calc(100vh - 20px); /* скролл по высоте экрана */
-    overflow-y: auto;
-    overflow-x: hidden;
-    -webkit-overflow-scrolling: touch;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-end !important;
+    gap: 10px !important;
 
-    z-index: 999;
+    /* скролл внутри tabs */
+    max-height: 220px !important;  /* можно 180-260 */
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+
+    z-index: 50 !important;
   }
 
-  /* кнопки не растягиваем */
+  /* важно: шапка должна быть относительной, чтобы absolute работал внутри неё */
+  .topbar{ position: relative !important; }
+
   .tabs a{
-    width: max-content;
-    white-space: nowrap;
+    width: max-content !important;
+    white-space: nowrap !important;
   }
 
-  /* чтобы контент НЕ залезал под кнопки справа */
-  main{
-    padding-right: 170px; /* если надо меньше/больше: 150-190 */
-  }
-
-  /* спрятать полосу скролла (не обязательно) */
   .tabs::-webkit-scrollbar{ width: 0; height: 0; }
 }
