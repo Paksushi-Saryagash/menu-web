@@ -18,7 +18,23 @@
       <a href="#drinks">🥤 Напитки</a>
       <a href="#contacts">📍 Контакты</a>
     </nav>
+
+    <!-- Mobile: button that opens category drawer (tabs stay for desktop) -->
+    <button id="cat-toggle" class="cat-toggle" aria-label="Открыть категории" aria-expanded="false">☰</button>
   </header>
+
+  <!-- Mobile category drawer -->
+  <div id="cat-drawer" class="cat-drawer" aria-hidden="true">
+    <div id="cat-backdrop" class="cat-backdrop"></div>
+    <nav class="cat-panel" aria-label="Категории">
+      <a href="#sets">🍱 Сеты</a>
+      <a href="#sushi">🍣 Суши</a>
+      <a href="#pizza">🍕 Пицца</a>
+      <a href="#snacks">🍗 Закуски</a>
+      <a href="#drinks">🥤 Напитки</a>
+      <a href="#contacts">📍 Контакты</a>
+    </nav>
+  </div>
 
   <main>
     <!-- Раздел: Сеты -->
