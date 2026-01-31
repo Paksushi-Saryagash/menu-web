@@ -341,45 +341,53 @@ main{padding-top:82px;}
   cursor:pointer;
   font-weight:bold;
 }
-/* === MOBILE FIX: vertical category buttons with scroll (keep brand stable) === */
+/* ===== Mobile: brand left, categories right (vertical + scroll), no overlay ===== */
 @media (max-width: 700px){
-  /* Keep header height compact so content doesn't get pushed down */
+
+/* Шапка в 2 колонки: слева название, справа кнопки */
 .topbar{
-  height:72px;
-  align-items:center;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: start;
+  gap: 12px;
+  height: auto;             /* важно: не фиксируем высоту */
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
-/* Move tabs out of normal flow so they don't stretch the header */
+/* Бренд не сжимается и не прыгает */
+.brand,
+.logo,
+.topbar-title{
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Кнопки категорий справа — вертикально */
 .tabs{
-  position:fixed;
-  top:12px;
-  right:12px;
-  display:flex;
-  flex-direction:column;      /* vertical */
-  align-items:flex-end;
-  gap:10px;
-  max-height:calc(100vh - 96px); /* scroll area below header */
-  overflow-y:auto;            /* vertical scroll */
-  overflow-x:hidden;
-  padding:6px 4px;
-  -webkit-overflow-scrolling:touch;
-  z-index:60;
+  position: static;         /* на всякий случай */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+
+  /* Скролл внутри списка кнопок */
+  max-height: 55vh;         /* можно 45-65vh по вкусу */
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  padding-right: 2px;
 }
 
-/* Optional: hide scrollbar on mobile */
-.tabs::-webkit-scrollbar{ width:0; height:0; }
+/* Кнопки не растягиваем, пусть будут "пузырями" */
+.tabs a,
+.tabs button{
+  width: max-content;
+  white-space: nowrap;
+}
 
-.tabs a{
-  white-space:nowrap;
-  width:max-content;
-}
-}
-@media (max-width: 700px){
-  /* чтобы контент не залезал под кнопки */
-  .content,
-  .main,
-  .page,
-  .container{
-    padding-right: 110px;
-  }
+/* (опционально) спрятать полосу прокрутки */
+.tabs::-webkit-scrollbar{ width: 0; height: 0; }
 }
