@@ -42,6 +42,83 @@ body{
   transform: translateY(-3px);
 }
 
+/* === MOBILE CATEGORY DRAWER (prevents header/tabs layout breaking on phones) === */
+.cat-toggle{ display:none; }
+.cat-drawer{ display:none; }
+
+@media (max-width: 700px){
+  /* On phones we hide the horizontal tabs and use a drawer instead */
+  .tabs{ display:none; }
+
+  .cat-toggle{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    width:44px;
+    height:44px;
+    border:0;
+    border-radius:14px;
+    background:#f7f7f7;
+    box-shadow: var(--shadow);
+    cursor:pointer;
+    font-size:20px;
+    line-height:1;
+  }
+
+  .brand{ max-width: 70vw; }
+
+  /* Drawer overlay */
+  .cat-drawer{
+    display:block;
+    position:fixed;
+    inset:0;
+    z-index:9999;
+    pointer-events:none;
+    opacity:0;
+    transition: opacity .2s ease;
+  }
+  .cat-drawer.open{
+    pointer-events:auto;
+    opacity:1;
+  }
+
+  .cat-backdrop{
+    position:absolute;
+    inset:0;
+    background: rgba(0,0,0,.25);
+  }
+
+  .cat-panel{
+    position:absolute;
+    top:76px;              /* below the fixed topbar */
+    right:12px;
+    width: 190px;
+    max-height: calc(100vh - 92px);
+    overflow-y:auto;
+    overflow-x:hidden;
+    -webkit-overflow-scrolling: touch;
+    background: rgba(255,255,255,.95);
+    backdrop-filter: blur(8px);
+    border-radius: 18px;
+    padding: 10px;
+    box-shadow: var(--shadow);
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+  }
+  .cat-panel a{
+    text-decoration:none;
+    color:#222;
+    padding:10px 12px;
+    border-radius:999px;
+    background:#f7f7f7;
+    white-space:nowrap;
+  }
+  .cat-panel a:active{ transform: scale(.98); }
+
+  .cat-panel::-webkit-scrollbar{ width: 0; height: 0; }
+}
+
 /* === MAIN === */
 main{padding-top:82px;}
 .section{
@@ -340,55 +417,4 @@ main{padding-top:82px;}
   color:#fff;
   cursor:pointer;
   font-weight:bold;
-}
-/* ===== Mobile: brand left, categories right (vertical + scroll), no overlay ===== */
-/* ===== MOBILE FIX: vertical tabs with own scroll + no huge header ===== */
-/* ===== MOBILE CLEAN FIX: vertical tabs but NO overlay and NO narrow cards ===== */
-@media (max-width: 700px){
-
-  /* вернуть нормальную ширину контента */
-  main{ padding-right: 0 !important; }
-
-  /* шапка компактная */
-  .topbar{
-    height: 72px !important;
-    align-items: center !important;
-  }
-
-  /* бренд как раньше */
-  .brand{
-    max-width: 60vw !important;
-    white-space: nowrap !important;
-    overflow: hidden !important;
-    text-overflow: ellipsis !important;
-  }
-
-  /* tabs НЕ fixed — чтобы не перекрывали */
-  .tabs{
-    position: absolute !important;
-    top: 10px !important;
-    right: 10px !important;
-
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: flex-end !important;
-    gap: 10px !important;
-
-    /* скролл внутри tabs */
-    max-height: 220px !important;  /* можно 180-260 */
-    overflow-y: auto !important;
-    overflow-x: hidden !important;
-
-    z-index: 50 !important;
-  }
-
-  /* важно: шапка должна быть относительной, чтобы absolute работал внутри неё */
-  .topbar{ position: relative !important; }
-
-  .tabs a{
-    width: max-content !important;
-    white-space: nowrap !important;
-  }
-
-  .tabs::-webkit-scrollbar{ width: 0; height: 0; }
 }
