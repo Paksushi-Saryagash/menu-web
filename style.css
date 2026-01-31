@@ -341,3 +341,36 @@ main{padding-top:82px;}
   cursor:pointer;
   font-weight:bold;
 }
+/* === MOBILE FIX: vertical category buttons with scroll (keep brand stable) === */
+@media (max-width: 700px){
+  /* Keep header height compact so content doesn't get pushed down */
+.topbar{
+  height:72px;
+  align-items:center;
+}
+
+/* Move tabs out of normal flow so they don't stretch the header */
+.tabs{
+  position:fixed;
+  top:12px;
+  right:12px;
+  display:flex;
+  flex-direction:column;      /* vertical */
+  align-items:flex-end;
+  gap:10px;
+  max-height:calc(100vh - 96px); /* scroll area below header */
+  overflow-y:auto;            /* vertical scroll */
+  overflow-x:hidden;
+  padding:6px 4px;
+  -webkit-overflow-scrolling:touch;
+  z-index:60;
+}
+
+/* Optional: hide scrollbar on mobile */
+.tabs::-webkit-scrollbar{ width:0; height:0; }
+
+.tabs a{
+  white-space:nowrap;
+  width:max-content;
+}
+}
