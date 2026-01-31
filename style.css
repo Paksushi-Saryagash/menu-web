@@ -374,3 +374,12 @@ main{padding-top:82px;}
   width:max-content;
 }
 }
+@media (max-width: 700px){
+  /* чтобы контент не залезал под кнопки */
+  .content,
+  .main,
+  .page,
+  .container{
+    padding-right: 110px;
+  }
+}
