@@ -249,7 +249,7 @@ const DATA = {
       slug:'alma-arasan',
       category:'small',
       popular:false,
-      img:'images/sets/Set-AlmaArasan.jpg',
+      img:'images/sets/Set-Almaarasan.jpg',
       price:8990,
       short:'🍣 40 шт суши + 🌭 корн дог + 🍗 нагетсы + 🍕 4 сезона + 🍟 фри',
       desc:'🍣 Цезарь — 20 шт\n🍣 Америка — 20 шт\n\n🌭 Корн дог — 1 шт\n🍗 Нагетсы — 8 шт\n\n🍕 4 сезона — 1 шт\n\n🍟 Фри — 1 шт'
@@ -303,7 +303,7 @@ const DATA = {
       slug:'4you',
       category:'small',
       popular:false,
-      img:'images/sets/Set-4you.jpg',
+      img:'images/sets/Set-4You.jpg',
       price:7700,
       short:'🍣 40 шт суши + 🍘 саше + 🍗 нагетсы + 🟡 шарики',
       desc:'🍣 Филадельфия — 10 шт\n🍣 Сырный ролл — 10 шт\n🍣 Цезарь — 10 шт\n🍣 Америка с лососем — 10 шт\n\n🍘 Саше — 4 шт\n\n🍗 Нагетсы — 8 шт\n\n🟡 Шарики — 1 шт'
@@ -502,7 +502,7 @@ const DATA = {
       slug:'chetam',
       category:'small',
       popular:false,
-      img:'images/sets/Set-Chetam.jpg',
+      img:'images/sets/Set-CheTam.jpg',
       price:9490,
       short:'🍣 60 шт суши + 🍕 маргарита + 🍟 фри + 🥤 кола',
       desc:'🍣 Филадельфия — 10 шт\n🍣 Америка темпура — 10 шт\n🍣 Цезарь темп — 10 шт\n🍣 Цезарь запечённый — 10 шт\n🍣 Капа маки — 10 шт\n🍣 Бонито — 10 шт\n\n🍕 Маргарита — 1 шт\n🍟 Фри — 1 шт\n🥤 Кола — 1 л'
@@ -567,7 +567,7 @@ const DATA = {
       slug:'tiktok',
       category:'big',
       popular:false,
-      img:'images/sets/Set-Tiktok.jpg',
+      img:'images/sets/Set-TikTok.jpg',
       price:23490,
       short:'🍣 120 шт суши + 🍕 4 пицца + 🍗 нагетсы + 🍟 фри',
       desc:'🍣 Филадельфия — 40 шт\n🍣 Цезарь — 20 шт\n🍣 Америка — 30 шт\n🍣 ПАК ролл — 10 шт\n🍣 Цезарь запеченный — 10 шт\n🍣 Блинчик — 10 шт\n\n🍕 Пеперони — 2 шт\n🍕 4 Сезона — 2 шт\n\n🍗 Нагетсы — 6 шт\n🍟 Фри — 1 шт'
