@@ -1114,3 +1114,34 @@ function openFullscreen(src){
   fsClose.onclick = close;
   fsBack.onclick = close;
 }
+
+// ===== Mobile category drawer (hamburger) =====
+(function(){
+  const toggle = document.getElementById('cat-toggle');
+  const drawer = document.getElementById('cat-drawer');
+  const backdrop = document.getElementById('cat-backdrop');
+  if(!toggle || !drawer || !backdrop) return;
+
+  const open = () => {
+    drawer.classList.add('open');
+    drawer.setAttribute('aria-hidden','false');
+    toggle.setAttribute('aria-expanded','true');
+  };
+  const close = () => {
+    drawer.classList.remove('open');
+    drawer.setAttribute('aria-hidden','true');
+    toggle.setAttribute('aria-expanded','false');
+  };
+
+  toggle.addEventListener('click', (e)=>{
+    e.preventDefault();
+    drawer.classList.contains('open') ? close() : open();
+  });
+  backdrop.addEventListener('click', close);
+
+  // Close when a category is selected
+  drawer.querySelectorAll('a').forEach(a=>a.addEventListener('click', close));
+
+  // ESC to close
+  document.addEventListener('keydown', (e)=>{ if(e.key === 'Escape') close(); });
+})();
