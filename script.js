@@ -3,6 +3,28 @@ const DATA = {
   sets: [
 
     {
+      name:'Рамадан',
+      slug:'ramadan',
+      category:'big',
+      popular:true,
+      img:'images/sets/Set-Ramadan.jpg',
+      price:12500,
+      short:'🍣 30 шт суши + 3 шт Пицца, Крылышки + 🎁',
+      desc:'🍣 Цезарь — 20 шт\n🍣 Америка — 10 шт\n🍕 Пеперони-1 шт\n🍕 Маргарита-1 шт\n🍕 4 Сезона-1 шт\n🍗 Крылышки-16 шт\n\n🎁 Фри + Кола 2л'
+    },
+
+    {
+      name:'Ауызашар',
+      slug:'auyzashar',
+      category:'small',
+      popular:true,
+      img:'images/sets/Set-Auyzashar.jpg',
+      price:8990,
+      short:'🍣 40 шт суши + 2 шт Пицца, Крылышки + 🎁',
+      desc:'🍣 Филадельфия — 10 шт\n🍣 Цезарь — 20 шт\n🍣 Канада — 10 шт\n🍕 Пеперони-1 шт\n🍕 Маргарита-1 шт\n🍗 Крылышки-8 шт\n\n🎁 Фри + Кола 1л'
+    },
+
+    {
       name:'Олигарх',
       slug:'oligarh',
       category:'small',
@@ -568,7 +590,7 @@ const DATA = {
       category:'small',
       popular:true,
       img:'images/sets/Set-Sharаga.jpg',
-      price:6000,
+      price:7000,
       short:'🍣 50 шт суши + 🍕 пицца + 🥤 кола',
       desc:'🍣 Цезарь — 20 шт\n🍣 Америка — 10 шт\n🍣 Калифорния — 10 шт\n🍣 Каппа маки — 10 шт\n\n🍕 Пеперони — 1 шт\n\n🥤 Кола — 1л'
     },
@@ -689,7 +711,7 @@ const DATA = {
       category:'small',
       popular:true,
       img:'images/sets/Set-Pak.jpeg',
-      price:6000,
+      price:7000,
       short:'🍣 50 шт суши + 🍕 пицца + 🥤 кола',
       desc:'🍣 Калифорния — 10 шт\n🍣 Капа-маки — 10 шт\n🍣 Цезарь запеченный — 10 шт\n🍣 Цезарь — 10 шт\n🍣 Америка — 10 шт\n\n🍕 Пеперони — 1 шт\n\n🥤 Кола 1л'
     },
@@ -733,7 +755,7 @@ const DATA = {
       category:'small',
       popular:false,
       img:'images/sets/Set-Katya.jpg',
-      price:6000,
+      price:7000,
       short:'🍣 50 шт суши + 🍕 пицца',
       desc:'🍣 Цезарь — 20 шт\n🍣 Капа-маки — 20 шт\n🍣 Америка — 10 шт\n\n🍕 Пеперони — 1 шт'
     },
@@ -799,7 +821,7 @@ const DATA = {
       category:'small',
       popular:false,
       img:'images/sets/Set-Arigato.jpg',
-      price:null,
+      price:9500,
       short:'🍣 40 шт суши + 🍕 пицца + 🍟 фри + 🍔 2 бургер',
       desc:'🍣 Филадельфия — 10 шт\n🍣 Америка — 10 шт\n🍣 Цезарь — 10 шт\n🍣 Цезарь запеченный — 10 шт\n\n🍕 Пеперони — 1 шт\n\n🍟 Фри — 1 шт\n🍔 Бургер(куриный) — 2 шт'
     },
@@ -832,7 +854,7 @@ const DATA = {
       category:'big',
       popular:false,
       img:'images/sets/Set-Chellendge.jpg',
-      price:null,
+      price:10500,
       short:'🍣 60 шт суши + 🍕 2 пиццы',
       desc:'🍣 Филадельфия — 20 шт\n🍣 Цезарь — 20 шт\n🍣 Америка — 20 шт\n\n🍕 Пеперони — 1 шт\n🍕 4 Сезона — 1 шт'
     },
