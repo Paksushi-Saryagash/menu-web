@@ -19,7 +19,7 @@ const DATA = {
       category:'small',
       popular:true,
       img:'images/sets/Set-AuyzAshar.jpeg',
-      price:8990,
+      price:9990,
       short:'🍣 40 шт суши + 2 шт Пицца, Крылышки + 🎁',
       desc:'🍣 Филадельфия — 10 шт\n🍣 Цезарь — 20 шт\n🍣 Канада — 10 шт\n🍕 Пеперони-1 шт\n🍕 Маргарита-1 шт\n🍗 Крылышки-8 шт\n\n🎁 Фри + Кола 1л'
     },
